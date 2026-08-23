@@ -1,0 +1,14 @@
+{
+  "name": "simplepost",
+  "displayName": "SimplePost",
+  "version": "0.1.0",
+  "description": "Draft, validate, and schedule social posts across X, Threads, Instagram, Facebook, Telegram, YouTube, and Bluesky through SimplePost.",
+  "author": {
+    "name": "Creafexlab",
+    "url": "https://github.com/simple-post"
+  },
+  "homepage": "https://simplepost.social",
+  "repository": "https://github.com/simple-post/simplepost-claude-plugin",
+  "license": "MIT",
+  "keywords": ["social-media", "scheduling", "x", "threads", "instagram", "content"]
+}
