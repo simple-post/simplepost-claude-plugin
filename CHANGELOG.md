@@ -2,6 +2,13 @@
 
 All notable changes to this plugin are documented here.
 
+## 0.2.1 - 2026-08-25
+
+- Preload `platform-craft` into `platform-copywriter` so delegated drafts receive the plugin's platform guidance.
+- Clarify when to use public media URLs versus chat-provided file references.
+- Add a stable `idempotencyKey` to approved `create_post` payloads so ambiguous retries cannot publish duplicates.
+- Restore the directory-facing root `SETUP.md` guide while retaining `/simplepost:setup` for Claude Code.
+
 ## 0.2.0 - 2026-08-25
 
 - Add `.claude-plugin/marketplace.json` so the repository installs directly with `/plugin marketplace add`.
