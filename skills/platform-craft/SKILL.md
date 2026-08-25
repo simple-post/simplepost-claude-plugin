@@ -1,4 +1,5 @@
 ---
+name: platform-craft
 description: Adapts copy for supported social platforms. Use for write a post, caption, tweet, thread, social copy, or adapt for.
 ---
 

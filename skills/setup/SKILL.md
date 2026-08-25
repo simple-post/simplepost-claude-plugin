@@ -1,4 +1,5 @@
 ---
+name: setup
 description: Verifies SimplePost OAuth and connected accounts. Use for setup, first run, sign in, authorization, or no accounts.
 disable-model-invocation: true
 ---

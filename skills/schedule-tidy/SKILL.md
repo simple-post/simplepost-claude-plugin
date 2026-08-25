@@ -1,4 +1,5 @@
 ---
+name: schedule-tidy
 description: Audits the SimplePost queue for cadence and content hygiene. Use for schedule tidy, queue gaps, duplicate angles, stale posts, or reschedule.
 ---
 

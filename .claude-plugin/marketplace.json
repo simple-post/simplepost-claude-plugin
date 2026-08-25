@@ -1,0 +1,14 @@
+{
+  "name": "simplepost",
+  "description": "Official marketplace for the SimplePost Claude plugin.",
+  "owner": {
+    "name": "Creafexlab",
+    "url": "https://simplepost.social"
+  },
+  "plugins": [
+    {
+      "name": "simplepost",
+      "source": "./"
+    }
+  ]
+}

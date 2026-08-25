@@ -10,13 +10,14 @@ You need a [SimplePost](https://simplepost.social) account. Connect the social a
 
 ### Claude Code
 
-After the plugin is published in Anthropic's directory:
+Add this repository as a marketplace, then install:
 
 ```text
-/plugin install simplepost@claude-plugins-official
+/plugin marketplace add simple-post/simplepost-claude-plugin
+/plugin install simplepost@simplepost
 ```
 
-For source testing, clone this repository and start Claude Code with:
+For local development, clone this repository and start Claude Code with:
 
 ```bash
 claude --plugin-dir ./simplepost-claude-plugin
@@ -34,12 +35,12 @@ Run `/simplepost:setup`. If prompted, run `/mcp`, select `simplepost`, and compl
 
 - `/simplepost:setup` — verify OAuth and connected social accounts.
 - `/simplepost:platform-craft` — apply platform-native copy judgment for X, Threads, Instagram, Facebook, Telegram, YouTube, and Bluesky.
-- `/simplepost:repurpose <idea>` — turn one idea into variants for connected platforms without publishing.
+- `/simplepost:repurpose [idea]` — turn one idea into variants for connected platforms without publishing.
 - `/simplepost:post-review` — preview the exact payload and require explicit approval before a write.
-- `/simplepost:week-plan <brief>` — build a conflict-aware weekly content plan and route the batch through review.
+- `/simplepost:week-plan [brief]` — build a conflict-aware weekly content plan and route the batch through review.
 - `/simplepost:schedule-tidy` — audit scheduled content for cadence, gaps, repeated angles, and stale references.
 
-The plugin also includes the read-only drafting sub-agent `simplepost:platform-copywriter`.
+The plugin also includes `simplepost:platform-copywriter`, a drafting sub-agent with no publishing tools, used by `repurpose` and `week-plan` to draft platform variants in parallel.
 
 ## Connector and authentication
 

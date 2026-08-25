@@ -1,4 +1,5 @@
 ---
+name: post-review
 description: Gates every SimplePost publish or schedule write. Use for create post, publish, schedule, post now, or post-review.
 ---
 
