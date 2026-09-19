@@ -1,0 +1,33 @@
+{
+  "name": "simplepost",
+  "version": "0.3.0",
+  "description": "Publish, schedule, draft, preview, inspect, and manage social posts through SimplePost.",
+  "license": "MIT",
+  "homepage": "https://simplepost.social",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/simple-post/simplepost-claude-plugin.git"
+  },
+  "keywords": [
+    "openclaw",
+    "social-media",
+    "publishing",
+    "scheduling",
+    "mcp"
+  ],
+  "files": [
+    ".claude-plugin/",
+    ".mcp.json",
+    "agents/",
+    "assets/icon.png",
+    "docs/",
+    "mcp.json",
+    "openclaw.plugin.json",
+    "plugin.json",
+    "skills/",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md",
+    "SETUP.md"
+  ]
+}

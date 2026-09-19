@@ -20,6 +20,10 @@ Install this public repository as a Kiro Power. It uses the same Agent Plugins v
 
 Install the repository directly with `grok plugin install simple-post/simplepost-claude-plugin --trust`. See [docs/GROK.md](docs/GROK.md) for local verification and the pinned-SHA entry required by the official xAI marketplace.
 
+### OpenClaw
+
+Install this repository as a compatible bundle plugin with `openclaw plugins install git:github.com/simple-post/simplepost-claude-plugin`. See [docs/OPENCLAW.md](docs/OPENCLAW.md) for local inspection and ClawHub validation and publication.
+
 ### Claude Code
 
 Add this repository as a marketplace, then install:

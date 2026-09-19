@@ -13,6 +13,7 @@ All notable changes to this plugin are documented here.
 - Make shared workflow skills portable while keeping the optional Claude copywriting sub-agent.
 - Add Kiro Power activation keywords, verification steps, and registry submission copy.
 - Make the optional copywriting agent portable to Grok Build and document the official pinned-SHA marketplace submission.
+- Add ClawHub package metadata, compliant catalog artwork, and OpenClaw bundle validation and publication instructions.
 
 ## 0.2.1 - 2026-08-25
 
