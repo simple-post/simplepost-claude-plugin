@@ -11,6 +11,7 @@ All notable changes to this plugin are documented here.
 - Refresh the Claude plugin description and discovery keywords.
 - Add Agent Plugins v1 manifests for portable installation in Cursor and other conforming clients.
 - Make shared workflow skills portable while keeping the optional Claude copywriting sub-agent.
+- Add Kiro Power activation keywords, verification steps, and registry submission copy.
 
 ## 0.2.1 - 2026-08-25
 

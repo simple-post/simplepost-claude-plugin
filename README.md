@@ -12,6 +12,10 @@ You need a [SimplePost](https://simplepost.social) account. Connect the social a
 
 Install this public repository as an Agent Plugin from Cursor's **Customize** view. For local verification and the Marketplace checklist, see [docs/CURSOR.md](docs/CURSOR.md).
 
+### Kiro
+
+Install this public repository as a Kiro Power. It uses the same Agent Plugins v1 manifests as Cursor. See [docs/KIRO.md](docs/KIRO.md) for activation tests and prepared registry submission copy.
+
 ### Claude Code
 
 Add this repository as a marketplace, then install:
