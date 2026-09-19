@@ -13,4 +13,4 @@ Apply the platform guidance below to the user's idea and voice. Preserve facts a
 - **YouTube:** Make the opening promise match the actual video. Structure the description so the summary, useful resources, and next action are easy to find; keep links clearly labelled. Use a small number of relevant hashtags and valid creator mentions. Avoid pasting a generic social caption that ignores what the viewer will watch.
 - **Bluesky:** Start directly and write for a conversational, community-aware feed. Use a thread when context or evidence needs distinct beats. Place links naturally, use hashtags only where they aid discovery, and mention exact accounts when participation matters. Avoid hashtag-heavy copy or unexplained cross-post references from another network.
 
-This skill shapes copy only. Any publishing or scheduling must go through the `post-review` skill and its explicit approval gate.
+This skill shapes copy only. Hand publishing, scheduling, drafting, or preview work to the `simplepost` skill. An explicit request to publish exact content is authorization to publish; a request to draft, adapt, or preview is not.

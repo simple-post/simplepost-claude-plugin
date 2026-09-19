@@ -1,12 +1,16 @@
-# SimplePost Claude Plugin
+# SimplePost Agent Plugin
 
-SimplePost helps Claude publish, schedule, draft, preview, inspect, and manage social posts across connected accounts. The plugin combines the SimplePost remote MCP connector with the flagship SimplePost skill from [`simple-post/core`](https://github.com/simple-post/core), plus focused copywriting and planning workflows for Claude Code and Cowork.
+SimplePost helps AI agents publish, schedule, draft, preview, inspect, and manage social posts across connected accounts. The repository is both a portable [Agent Plugin](https://agent-plugins.org/) and a Claude plugin. It combines the SimplePost remote MCP connector with the flagship SimplePost skill from [`simple-post/core`](https://github.com/simple-post/core), plus focused copywriting and planning workflows.
 
 ## Prerequisites
 
 You need a [SimplePost](https://simplepost.social) account. Connect the social accounts you intend to use in the [SimplePost web app](https://app.simplepost.social) before running publishing workflows.
 
 ## Install
+
+### Cursor
+
+Install this public repository as an Agent Plugin from Cursor's **Customize** view. For local verification and the Marketplace checklist, see [docs/CURSOR.md](docs/CURSOR.md).
 
 ### Claude Code
 
@@ -41,7 +45,7 @@ The flagship `/simplepost:simplepost` skill chooses the right SimplePost interfa
 - The TypeScript SDK for in-process publishing.
 - The Scheduler app for account management and hosted scheduling.
 
-The existing Claude-specific workflow skills remain available:
+Additional workflow skills remain available in clients that support Agent Skills:
 
 - `/simplepost:setup` — verify OAuth and connected social accounts.
 - `/simplepost:platform-craft` — apply platform-native copy judgment for X, Threads, Instagram, Facebook, Telegram, YouTube, and Bluesky.
@@ -50,7 +54,7 @@ The existing Claude-specific workflow skills remain available:
 - `/simplepost:week-plan [brief]` — build a conflict-aware weekly content plan and route the batch through review.
 - `/simplepost:schedule-tidy` — audit scheduled content for cadence, gaps, repeated angles, and stale references.
 
-The plugin also includes `simplepost:platform-copywriter`, a drafting sub-agent with no publishing tools, used by `repurpose` and `week-plan` to draft platform variants in parallel.
+Claude also loads `simplepost:platform-copywriter`, a drafting sub-agent with no publishing tools. Portable Agent Plugin clients ignore the optional `agents/` directory; the shared skills do not require that agent to work.
 
 The flagship skill preserves exact supplied copy unless adaptation is requested, resolves real account IDs before acting, uses idempotency keys for writes, and reports partial per-account or per-thread failures instead of treating a successful request as a universally successful post.
 

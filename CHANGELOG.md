@@ -9,6 +9,8 @@ All notable changes to this plugin are documented here.
 - Add current posting safeguards for account resolution, idempotency, scheduling, media, partial failures, billing eligibility, and TikTok publishing options.
 - Add a reusable SimplePost logo asset for marketplace listings.
 - Refresh the Claude plugin description and discovery keywords.
+- Add Agent Plugins v1 manifests for portable installation in Cursor and other conforming clients.
+- Make shared workflow skills portable while keeping the optional Claude copywriting sub-agent.
 
 ## 0.2.1 - 2026-08-25
 

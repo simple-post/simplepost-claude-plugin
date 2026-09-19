@@ -1,0 +1,21 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "simplepost",
+  "version": "0.3.0",
+  "description": "Publish, schedule, draft, preview, inspect, and manage social posts through SimplePost.",
+  "author": {
+    "name": "Creafexlab",
+    "email": "support@simplepost.social",
+    "url": "https://simplepost.social"
+  },
+  "homepage": "https://simplepost.social",
+  "repository": "https://github.com/simple-post/simplepost-claude-plugin",
+  "license": "MIT",
+  "keywords": [
+    "social-media",
+    "publishing",
+    "scheduling",
+    "mcp",
+    "content"
+  ]
+}
