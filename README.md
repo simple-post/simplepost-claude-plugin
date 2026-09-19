@@ -16,6 +16,10 @@ Install this public repository as an Agent Plugin from Cursor's **Customize** vi
 
 Install this public repository as a Kiro Power. It uses the same Agent Plugins v1 manifests as Cursor. See [docs/KIRO.md](docs/KIRO.md) for activation tests and prepared registry submission copy.
 
+### Grok Build
+
+Install the repository directly with `grok plugin install simple-post/simplepost-claude-plugin --trust`. See [docs/GROK.md](docs/GROK.md) for local verification and the pinned-SHA entry required by the official xAI marketplace.
+
 ### Claude Code
 
 Add this repository as a marketplace, then install:
@@ -58,7 +62,7 @@ Additional workflow skills remain available in clients that support Agent Skills
 - `/simplepost:week-plan [brief]` — build a conflict-aware weekly content plan and route the batch through review.
 - `/simplepost:schedule-tidy` — audit scheduled content for cadence, gaps, repeated angles, and stale references.
 
-Claude also loads `simplepost:platform-copywriter`, a drafting sub-agent with no publishing tools. Portable Agent Plugin clients ignore the optional `agents/` directory; the shared skills do not require that agent to work.
+Claude and Grok Build can also load `simplepost:platform-copywriter`, a drafting sub-agent with no publishing tools. Portable Agent Plugin clients ignore the optional `agents/` directory; the shared skills do not require that agent to work.
 
 The flagship skill preserves exact supplied copy unless adaptation is requested, resolves real account IDs before acting, uses idempotency keys for writes, and reports partial per-account or per-thread failures instead of treating a successful request as a universally successful post.
 
