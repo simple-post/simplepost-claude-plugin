@@ -2,6 +2,14 @@
 
 All notable changes to this plugin are documented here.
 
+## 0.3.0 - 2026-09-20
+
+- Add the flagship `simplepost` Agent Skill from `simple-post/core` at source commit `2839eca`.
+- Document MCP, CLI, HTTP API, TypeScript SDK, and Scheduler interface selection.
+- Add current posting safeguards for account resolution, idempotency, scheduling, media, partial failures, billing eligibility, and TikTok publishing options.
+- Add a reusable SimplePost logo asset for marketplace listings.
+- Refresh the Claude plugin description and discovery keywords.
+
 ## 0.2.1 - 2026-08-25
 
 - Preload `platform-craft` into `platform-copywriter` so delegated drafts receive the plugin's platform guidance.

@@ -1,6 +1,6 @@
 # SimplePost Claude Plugin
 
-SimplePost helps Claude draft platform-native social copy, review the exact post, and publish or schedule it across connected accounts. The plugin combines the SimplePost remote MCP connector with planning, repurposing, queue-maintenance, and approval-gated publishing workflows for Claude Code and Cowork.
+SimplePost helps Claude publish, schedule, draft, preview, inspect, and manage social posts across connected accounts. The plugin combines the SimplePost remote MCP connector with the flagship SimplePost skill from [`simple-post/core`](https://github.com/simple-post/core), plus focused copywriting and planning workflows for Claude Code and Cowork.
 
 ## Prerequisites
 
@@ -33,6 +33,16 @@ Run `/simplepost:setup`. If prompted, run `/mcp`, select `simplepost`, and compl
 
 ## Skills and commands
 
+The flagship `/simplepost:simplepost` skill chooses the right SimplePost interface and handles publishing, scheduling, drafts, previews, inspection, queue management, and integration work. It includes focused references for:
+
+- Remote MCP workflows through accounts connected at `app.simplepost.social`.
+- The SimplePost CLI for terminal, scripting, and CI workflows.
+- The HTTP API for service-to-service integrations.
+- The TypeScript SDK for in-process publishing.
+- The Scheduler app for account management and hosted scheduling.
+
+The existing Claude-specific workflow skills remain available:
+
 - `/simplepost:setup` — verify OAuth and connected social accounts.
 - `/simplepost:platform-craft` — apply platform-native copy judgment for X, Threads, Instagram, Facebook, Telegram, YouTube, and Bluesky.
 - `/simplepost:repurpose [idea]` — turn one idea into variants for connected platforms without publishing.
@@ -41,6 +51,8 @@ Run `/simplepost:setup`. If prompted, run `/mcp`, select `simplepost`, and compl
 - `/simplepost:schedule-tidy` — audit scheduled content for cadence, gaps, repeated angles, and stale references.
 
 The plugin also includes `simplepost:platform-copywriter`, a drafting sub-agent with no publishing tools, used by `repurpose` and `week-plan` to draft platform variants in parallel.
+
+The flagship skill preserves exact supplied copy unless adaptation is requested, resolves real account IDs before acting, uses idempotency keys for writes, and reports partial per-account or per-thread failures instead of treating a successful request as a universally successful post.
 
 ## Connector and authentication
 
