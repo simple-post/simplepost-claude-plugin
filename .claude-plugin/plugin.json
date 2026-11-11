@@ -1,13 +1,14 @@
 {
   "name": "simplepost",
   "displayName": "SimplePost",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Publish, schedule, draft, preview, inspect, and manage social posts through SimplePost.",
   "author": {
     "name": "Creafexlab",
     "url": "https://github.com/simple-post"
   },
   "homepage": "https://simplepost.social",
+  "privacyPolicyUrl": "https://simplepost.social/privacy",
   "repository": "https://github.com/simple-post/simplepost-claude-plugin",
   "license": "MIT",
   "keywords": ["social-media", "publishing", "scheduling", "mcp", "content"]
