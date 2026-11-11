@@ -6,6 +6,6 @@ disable-model-invocation: true
 
 1. Call `list_accounts`.
 2. If the SimplePost server is not authorized, stop. Tell the user to run `/mcp`, select `simplepost`, complete OAuth sign-in, and then rerun `/simplepost:setup`.
-3. If authorization succeeds but the account list is empty, stop. Direct the user to [the SimplePost web app](https://app.simplepost.social) to connect platform accounts, and state explicitly that no plugin tool can connect, disconnect, or reauthorize a social account.
+3. If authorization succeeds but the account list is empty, show the platform-specific `connectionLinks` URL returned by `list_accounts`, copied unchanged. Ask which platform only if unclear. The user completes authorization in the browser; refresh accounts when they return and verify the destination. Never collect passwords, keys, or tokens in chat. Disconnection and reauthorization remain in [the SimplePost web app](https://app.simplepost.social).
 4. On success, report each connected account by platform and display name. Do not expose credentials or access tokens.
 5. Recommend two or three useful starting commands based on the connected platforms: `/simplepost:repurpose`, `/simplepost:week-plan`, and `/simplepost:schedule-tidy`.

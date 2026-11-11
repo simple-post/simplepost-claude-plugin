@@ -33,13 +33,11 @@ Run `/simplepost:setup`. If prompted, run `/mcp`, select `simplepost`, and compl
 
 ## Skills and commands
 
-The flagship `/simplepost:simplepost` skill chooses the right SimplePost interface and handles publishing, scheduling, drafts, previews, inspection, queue management, and integration work. It includes focused references for:
+The flagship `/simplepost:simplepost` skill handles publishing, scheduling, drafts, previews, inspection, and queue management through the hosted OAuth MCP connector. Its workflow is generated from the latest canonical skill in [`simple-post/core`](https://github.com/simple-post/core/tree/main/integrations/claude), using `scripts/sync-claude-skill.mjs` there.
 
-- Remote MCP workflows through accounts connected at `app.simplepost.social`.
-- The SimplePost CLI for terminal, scripting, and CI workflows.
-- The HTTP API for service-to-service integrations.
-- The TypeScript SDK for in-process publishing.
-- The Scheduler app for account management and hosted scheduling.
+This Claude directory package does not run a local CLI, SDK, HTTP server, hook, or shell command, and does not read existing credentials from the user's machine. Developer integrations remain documented separately at [docs.simplepost.social](https://docs.simplepost.social).
+
+Source snapshot: [`simple-post/core@30df5c750d14120462018ce11db8b0b666a3dd6a`](https://github.com/simple-post/core/tree/30df5c750d14120462018ce11db8b0b666a3dd6a/integrations/claude). The generated flagship skill is copied byte-for-byte; update it in core and regenerate rather than editing the copy here.
 
 The existing Claude-specific workflow skills remain available:
 
@@ -60,7 +58,13 @@ The remote MCP endpoint is [`https://app.simplepost.social/mcp`](https://app.sim
 
 ## Limits
 
-The plugin cannot connect, disconnect, or reauthorize social accounts; use the SimplePost web app for account management. It also cannot edit or delete an already-published post; use the destination platform itself. It does not provide social-network engagement analytics.
+Use the platform-specific connection link returned by SimplePost to add a social destination in the browser. Disconnection and reauthorization remain in the SimplePost web app. The plugin cannot edit or delete an already-published post; use the destination platform itself. It does not provide social-network engagement analytics.
+
+## Publishing permissions and media privacy
+
+Before a write, establish the exact user-authorized action, accounts, content, media, timing, and audience. A draft or preview request does not authorize publishing. When intent or required details are unclear, show the proposed action and ask. Publishing sends the selected content and media to SimplePost and the destination social platforms.
+
+Uploaded or imported media is internet-accessible to anyone with its URL, even when attached to a draft. Warn the user and obtain approval before exposing private, sensitive, or embargoed assets. Media previews and validation can import media; use text-only inputs for a non-writing smoke test. TikTok defaults to public when privacy is omitted: surface the selected audience and ask when public visibility has not been authorized.
 
 ## Privacy and support
 

@@ -3,4 +3,4 @@ description: Connect and verify SimplePost after installing the plugin. Use for 
 disable-model-invocation: true
 ---
 
-Run `/simplepost:setup`. It verifies SimplePost OAuth, checks the connected social accounts, and recommends a first workflow. Account connection and reauthorization happen in the SimplePost web app because the MCP tools cannot manage platform accounts.
+Run `/simplepost:setup`. It verifies SimplePost OAuth, checks connected social accounts, and recommends a first workflow. Use the returned platform-specific browser link to add a destination. Disconnecting or reauthorizing an existing destination remains in the SimplePost web app.
