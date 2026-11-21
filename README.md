@@ -17,15 +17,9 @@ Add this repository as a marketplace, then install:
 /plugin install simplepost@simplepost
 ```
 
-For local development, clone this repository and start Claude Code with:
-
-```bash
-claude --plugin-dir ./simplepost-claude-plugin
-```
-
 ### Cowork
 
-Open **Customize → Plugins**, find **SimplePost** in the plugin marketplace, and select **Install**. Before directory publication, use the Plugins page's upload option with a ZIP containing this repository's plugin files.
+Open the Claude directory, find **SimplePost**, and select **Install**.
 
 ## First run
 
@@ -37,7 +31,7 @@ The flagship `/simplepost:simplepost` skill handles publishing, scheduling, draf
 
 This Claude directory package does not run a local CLI, SDK, HTTP server, hook, or shell command, and does not read existing credentials from the user's machine. Developer integrations remain documented separately at [docs.simplepost.social](https://docs.simplepost.social).
 
-Source snapshot: [`simple-post/core@30df5c750d14120462018ce11db8b0b666a3dd6a`](https://github.com/simple-post/core/tree/30df5c750d14120462018ce11db8b0b666a3dd6a/integrations/claude). The generated flagship skill is copied byte-for-byte; update it in core and regenerate rather than editing the copy here.
+The flagship skill matches [core at `924e4f3`](https://github.com/simple-post/core/tree/924e4f3749cad9afc72edb3eadd6232e646119a8/integrations/claude). Make shared skill changes in core, then regenerate and copy the Claude version here.
 
 The existing Claude-specific workflow skills remain available:
 
@@ -48,7 +42,7 @@ The existing Claude-specific workflow skills remain available:
 - `/simplepost:week-plan [brief]` — build a conflict-aware weekly content plan and route the batch through review.
 - `/simplepost:schedule-tidy` — audit scheduled content for cadence, gaps, repeated angles, and stale references.
 
-The plugin also includes `simplepost:platform-copywriter`, a drafting sub-agent with no publishing tools, used by `repurpose` and `week-plan` to draft platform variants in parallel.
+The repurpose and weekly planning skills use the platform-craft guidance to draft variants, then route approved content through post review.
 
 The flagship skill preserves exact supplied copy unless adaptation is requested, resolves real account IDs before acting, uses idempotency keys for writes, and reports partial per-account or per-thread failures instead of treating a successful request as a universally successful post.
 
