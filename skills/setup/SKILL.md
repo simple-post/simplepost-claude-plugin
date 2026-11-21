@@ -1,8 +1,9 @@
 ---
 name: setup
 description: Verifies SimplePost OAuth and connected accounts. Use for setup, first run, sign in, authorization, or no accounts.
-disable-model-invocation: true
 ---
+
+Use this workflow when the user asks to connect, verify, or troubleshoot SimplePost.
 
 1. Call `list_accounts`.
 2. If the SimplePost server is not authorized, stop. Tell the user to run `/mcp`, select `simplepost`, complete OAuth sign-in, and then rerun `/simplepost:setup`.
